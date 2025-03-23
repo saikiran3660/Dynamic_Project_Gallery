@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Link</title>
+</head>
+<body>
+    <p>Commit ID: <span id="commit-id">eb35dfe</span></p>
+    <a id="github-link" href="https://github.com/saikiran3660/ass1.git" target="_blank">https://github.com/saikiran3660/ass1.git</a>
+    <button id="navigate-button">Ctrl+ Click</button>
+
+
+    <script>
+        document.getElementById('github-link').addEventListener('click', function() {
+            window.open(this.href, '_blank');
+        });
+    </script>
+</body>
+</html>

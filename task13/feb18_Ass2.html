@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+    </head>
+    <body>
+        <h1>Java Script Object</h1>
+       
+        <div id="container"></div>
+        <button id="demo" onclick="show_student_info();">click here to see your information</button><br>
+        <script>
+            const myDetails = {
+                name: "AKIREDDY SAIKIRAN",
+                studentId: "S00460128",
+                Department: "Computer Science",
+                greet: () => { return "Hello Sir, These are my details"; }
+            };
+
+            function show_student_info() {
+                console.log(myDetails.greet());
+                document.getElementById("container").innerHTML = `
+                    Name: ${myDetails.name} <br>
+                    Student ID: ${myDetails.studentId} <br>
+                    Department: ${myDetails.Department} <br>
+                    ${myDetails.greet()}
+                `;
+            }
+        </script>
+    </body>
+</html>

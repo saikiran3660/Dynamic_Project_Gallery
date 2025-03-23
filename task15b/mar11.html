@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Age Checker</title>
+    </head>
+    <body>
+        <h3>Calculate Your Age</h3>
+        <label for="birthDateInput">Enter Your Date of Birth:</label>
+        <input type="date" id="birthDateInput">
+        <button onclick="computeAge()">Check Age</button>
+        <p id="outputResult"></p>
+
+        <script>
+            // Function to calculate age based on the entered date of birth
+            function computeAge() {
+                const birthDateInput = document.getElementById("birthDateInput").value;
+
+                if (birthDateInput) {
+                    const birthDateObj = new Date(birthDateInput);
+                    const currentDate = new Date();
+                    let calculatedAge = currentDate.getFullYear() - birthDateObj.getFullYear();
+                    const differenceInMonths = currentDate.getMonth() - birthDateObj.getMonth();
+
+                    // Adjust age if the birthday hasn't occurred yet this year
+                    if (differenceInMonths < 0 || (differenceInMonths === 0 && currentDate.getDate() < birthDateObj.getDate())) {
+                        calculatedAge--;
+                    }
+
+                    // Display the age result
+                    document.getElementById("outputResult").innerText = `Your age is: ${calculatedAge} years`;
+                } else {
+                    // Handle invalid or missing input
+                    document.getElementById("outputResult").innerText = "Please select a valid date.";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+    </head>
+    <body>
+        <h1>JavaScript Object</h1>
+        <input type="text" placeholder="Enter student Name" id="sName">
+        <input type="text" placeholder="Enter student Id" id="sId">
+        <input type="text" placeholder="Enter Department Name" id="sDept">
+        <button onclick="insertData();">Insert Info</button>
+        <button onclick="showData();" id="show">Show Info</button>
+       
+        <div id="container"></div>
+       
+        <script>
+            const myDetails = {
+                name: "AKIREDDY SAIKIRAN",
+                studentId: "S00460128",
+                Department: "Computer science",
+                greet: () => { return "Hello Sir, These are my details"; }
+            };
+
+            function insertData() {
+                myDetails.name = document.getElementById("sName").value;
+                myDetails.studentId = document.getElementById("sId").value;
+                myDetails.Department = document.getElementById("sDept").value;
+            }
+
+            function showData() {
+                document.getElementById("container").innerHTML = `
+                    Name: ${myDetails.name} <br>
+                    Student ID: ${myDetails.studentId} <br>
+                    Department: ${myDetails.Department} <br><br>
+                    ${myDetails.greet()}
+                `;
+            }
+        </script>
+    </body>
+</html>

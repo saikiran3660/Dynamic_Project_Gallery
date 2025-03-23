@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>Random Number Generator</title>
+    <style>
+        body {
+            text-align: left;
+            margin-left: 20px;
+        }
+    </style>
+    <script>
+        function generateRandomNumber() {
+            var A = parseInt(document.getElementById("A").value);
+            var B = parseInt(document.getElementById("B").value);
+            var randomNumber = Math.floor(Math.random() * (B - A + 1)) + A;
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = "Random Number: " + randomNumber;
+            resultElement.style.color = randomNumber < (A + B) / 2 ? "blue" : "red";
+
+            setTimeout(function() {
+                document.body.innerHTML = "<h1 style='color: green;'>Sai Kiran</h1>";
+            }, 5000); 
+        setTimeout(clear_everything,5000);
+        }
+    </script>
+</head>
+
+<body>
+    <label for="A">Enter Min Range:</label>
+    <input type="number" id="A"><br><br>
+    <label for="B">Enter Max Range:</label>
+    <input type="number" id="B"><button onclick="generateRandomNumber()">Generate Random Number</button>
+    <p id="result"></p>
+</body>
+
+</html>

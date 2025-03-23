@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            button {
+                background-color: rgb(82, 82, 182);
+                color: white;
+                padding: 10px;
+                border: none; }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript Object</h1>
+        <input type="text" placeholder="Enter student Name" id="sName">
+        <input type="text" placeholder="Enter student Id" id="sId">
+        <input type="text" placeholder="Enter Department Name" id="sDept">
+        <button onclick="insertData();">Insert Info</button>
+        <button onclick="showData();" id="show">Show Info</button>
+        <button onclick="displayObjectData();">All Students Data</button>
+        <div id="container"></div>
+        <div id="objectDataContainer"></div>
+        <script>
+            let allDetails = [];
+            function insertData() {
+                let studentName = document.getElementById("sName").value;
+                let studentId = document.getElementById("sId").value;
+                let studentDept = document.getElementById("sDept").value;
+               
+                let myDetails = {
+                    name: studentName,
+                    studentId: studentId,
+                    Department: studentDept,
+                    greet: function() { return "Hello Sir, These are my details"; }};
+                allDetails.push(myDetails); 
+            }
+            function showData() {
+                if (allDetails.length > 0) {
+                    const myDetails = allDetails[allDetails.length - 1];
+                    document.getElementById("container").innerHTML = `
+                        Name: ${myDetails.name} <br>
+                        Student ID: ${myDetails.studentId} <br>
+                        Department: ${myDetails.Department} <br><br>
+                        ${myDetails.greet()}
+                    `;
+                } else {
+                    document.getElementById("container").innerHTML = "Insert Some data to display";
+                }
+            }
+
+            function displayObjectData() {
+                let dataHtml = '';
+                allDetails.forEach((details, index) => {
+                    dataHtml += `
+                        <div>
+                            <h3>Student ${index + 1} Details</h3>
+                            Name: ${details.name} <br>
+                            Student ID: ${details.studentId} <br>
+                            Department: ${details.Department} <br><br>
+                        </div>
+                    `;
+                });
+                document.getElementById("objectDataContainer").innerHTML = dataHtml;
+            }
+        </script>
+    </body>
+</html>

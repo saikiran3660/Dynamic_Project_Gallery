@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Kiran Akireddy - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h1>S</h1>
+            <p>Sai Kiran Akireddy<br>Web Developer</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/saikiran-varma" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section hero" data-aos="fade-up">
+            <h1>Hi, I'm <span>Sai Kiran</span>,</h1>
+            <h2>Electrical & Web Engineer</h2>
+            <p>Passionate about technology and innovation</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section" data-aos="fade-up">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="profile.jpg" alt="Sai Kiran Akireddy's Profile Picture" class="profile-pic">
+                <p>
+                    I am Sai Kiran Akireddy, an aspiring Electrical and Web Engineer looking for a full-time opportunity to secure the best position in an organization. I aim to employ my effective communication skills and willingness to learn to increase profitability and contribute to the growth of the organization.
+                </p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section" data-aos="fade-up">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Internship: Programming in Java (NPTEL)</h3>
+                    <p><em>2022</em></p>
+                    <p>Completed an internship focused on Java programming, earning a certification from SkillUp.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Internship: Smart Irrigation System</h3>
+                    <p><em>2021</em></p>
+                    <p>Developed a smart irrigation system to automate and optimize water usage for agricultural applications.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Internship: Underground Cable Distance and Fault Location Identification</h3>
+                    <p><em>2021</em></p>
+                    <p>Worked on a project using PIC 16F73 microcontroller to identify underground cable faults and their locations.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Internship: Collision Avoidance System</h3>
+                    <p><em>2020</em></p>
+                    <p>Designed a collision avoidance system to enhance safety through automation.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Internship: Study of Manufacturing Process of Turbo Generator (BHEL)</h3>
+                    <p><em>2020</em></p>
+                    <p>Studied the manufacturing process of turbo generators at BHEL, gaining insights into industrial engineering.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section" data-aos="fade-up">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Master's in Computer Science</h3>
+                    <p><em>Auburn University at Montgomery, 12/2025</em></p>
+                    <p>Currently pursuing a Master's degree in computer science with a focus on software development and algorithms.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Bachelor of Technology in Electrical and Electronic Engineering</h3>
+                    <p><em>J.B. Institute of Engineering & Technology, 06/2022</em></p>
+                    <p>Graduated with a focus on electrical engineering and technology.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Diploma in Electrical and Electronic Engineering</h3>
+                    <p><em>Mahaveer Institute of Science & Technology, 05/2019</em></p>
+                    <p>Completed a diploma with hands-on training in electrical systems.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Secondary School Certificate</h3>
+                    <p><em>Trinity High School, 04/2016</em></p>
+                    <p>Completed secondary education with a strong academic foundation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section" data-aos="fade-up">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Java</li>
+                <li>Typing Skill</li>
+                <li>Microcontrollers (PIC 16F73)</li>
+                <li>Smart Systems Design</li>
+                <li>Electrical Engineering</li>
+                <li>Communication Skills</li>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Problem Solving</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="work" class="section" data-aos="fade-up">
+            <h2>Projects</h2>
+            <div class="work-gallery">
+                <ul id="task-list" class="task-list"></ul>
+                <div class="task-details">
+                    <h3 id="task-title">Select a Project</h3>
+                    <p id="task-description">Click a project from the list to view details.</p>
+                    <iframe id="task-iframe" sandbox="allow-scripts allow-same-origin" frameborder="0" style="width: 100%; height: 500px; display: none;"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>I'm excited to connect and explore opportunities. Reach out to me!</p>
+            <p><i class="fas fa-map-marker-alt"></i> Montgomery, Alabama</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+19432447995">+1 943-244-7995</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:sakired1@edu.aum">sakired1@edu.aum</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/saikiran-varma" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <!-- AOS for animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

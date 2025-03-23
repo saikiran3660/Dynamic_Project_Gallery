@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="body_container">
+        <h1>Students</h1>
+        <label>Student Name:</label>
+        <input type="text" placeholder="Enter student Name" id="sName">
+        <label>Student Id:</label>
+        <input type="text" placeholder="Enter student Id" id="sId">
+        <label>Student Department:</label>
+        <input type="text" placeholder="Enter Department Name" id="sDept">
+        <button onclick="insertData();">Insert Info</button>
+        <button onclick="showData();" id="show">Show Info</button>
+        <button onclick="displayObjectData();">All Students Data</button>
+        <button onclick="clearData();">Clear Data</button>
+        <button onclick="clearinput();">Clear Display</button><br><br>
+        <input type="text" placeholder="Enter search term (name or ID)" id="searchTerm" onkeyup="searchData();"><br><br>
+        <div id="searchResults"></div>
+        <div id="container"></div>
+        <div id="objectDataContainer"></div>
+    </div>
+
+    <script>
+        let allDetails = [];
+
+        function Student(studentName, studentId, studentDept) {
+            this.studentName = studentName;
+            this.studentId = studentId;
+            this.studentDept = studentDept;
+            this.greet = function() { return "Hello Sir, These are my details"; };
+        }
+
+        function insertData() {
+            let studentName = document.getElementById("sName").value;
+            let studentId = document.getElementById("sId").value;
+            let studentDept = document.getElementById("sDept").value;
+
+            let new_student = new Student(studentName, studentId, studentDept);
+            allDetails.push(new_student);
+        }
+
+        function showData() {
+            let output = "<h2>Current Student details</h2>";
+
+            allDetails.forEach((student) => {
+                output += `
+                    <div>
+                        Name: ${student.studentName} <br>
+                        Student ID: ${student.studentId} <br>
+                        Department: ${student.studentDept} <br><br>
+                    </div>
+                `;
+            });
+
+            document.getElementById("container").innerHTML = output;
+        }
+
+        function clearData() {
+            document.getElementById("sName").value = "";
+            document.getElementById("sId").value = "";
+            document.getElementById("sDept").value = "";
+        }
+
+        function displayObjectData() {
+            let dataHtml = '';
+            allDetails.forEach((details, index) => {
+                dataHtml += `
+                    <div>
+                        <h3>Student ${index + 1} Details</h3>
+                        Name: ${details.studentName} <br>
+                        Student ID: ${details.studentId} <br>
+                        Department: ${details.studentDept} <br><br>
+                    </div>
+                `;
+            });
+
+            document.getElementById("objectDataContainer").innerHTML = dataHtml;
+        }
+
+        function clearinput() {
+            document.getElementById("container").innerHTML = "";
+            document.getElementById("objectDataContainer").innerHTML = "";
+            document.getElementById("searchResults").innerHTML = "";
+        }
+
+        function searchData() {
+            let searchTerm = document.getElementById("searchTerm").value.toLowerCase();
+            if (!searchTerm) {
+                document.getElementById("searchResults").innerHTML = "";
+                return;
+            }
+
+            let filteredStudents = allDetails.filter(student => {
+                return student.studentName.toLowerCase().includes(searchTerm) || student.studentId.toLowerCase().includes(searchTerm);
+            });
+
+            let searchResults = "<h2>Search Results</h2>";
+            if (filteredStudents.length > 0) {
+                filteredStudents.forEach((student) => {
+                    searchResults += `
+                        <div>
+                            Name: ${student.studentName} <br>
+                            Student ID: ${student.studentId} <br>
+                            Department: ${student.studentDept} <br><br>
+                        </div>
+                    `;
+                });
+            } else {
+                searchResults += "No matching students found.";
+            }
+
+            document.getElementById("searchResults").innerHTML = searchResults;
+        }
+    </script>
+</body>
+</html>

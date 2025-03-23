@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(){
+            let a = parseInt(document.getElementById("input_a").value);
+            let b = parseInt(document.getElementById("input_b").value);
+            let sum = 0;
+            do {
+                sum += a;
+                a++;
+            }
+            while (a <= b);
+            document.getElementById("output_span").innerHTML = sum;
+        }
+       
+    </script>
+</head>
+<body>
+    <h1>Calculate Sum</h1>
+    <label for="input_a">Start Number:</label>
+    <input type="number" id="input_a" required>
+    <label for="input_b">End Number:</label>
+    <input type="number" id="input_b" required>
+    <button onclick="calculate()">Calculate</button>
+    <p>Sum: <span id="output_span"></span></p>
+   
+</body>
+</html>

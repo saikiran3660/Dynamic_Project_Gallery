@@ -1,0 +1,20 @@
+[
+    { "id": 1, "title": "Task 1 : Expectation Document", "description": "___", "path": "task1/index.html" },
+    { "id": 2, "title": "Task 2: Basic HTML Styling", "description": "______", "path": "task2/indexss.html" },
+    { "id": 3, "title": "Task 3: CSS Hover", "description": "_______", "path": "task3/HTMLPage2.html" },
+    { "id": 4, "title": "Task 4: Welcome to JS", "description": "____", "path": "task4/index.html" },
+    { "id": 5, "title": "Task 5: Calculator with JS", "description": "_____", "path": "task5/jan30as2.html" },
+    { "id": 6, "title": "Task 6: GitHub Integration", "description": "______", "path": "task6/index.html" },
+    { "id": 7, "title": "Task 7: Console Output", "description": "_____", "path": "task7/console.js" },
+    { "id": 8, "title": "Task 8: String Operation", "description": "________", "path": "task8/feb4.html" },
+    { "id": 9, "title": "Task 9: Conditions", "description": "_________", "path": "task9/day5.html" },
+    { "id": 10, "title": "Task 10: Call-Stack with Array", "description": "__________", "path": "task10/day5_2.html" },
+    { "id": 11, "title": "Task 11: Star with Loops", "description": "__________", "path": "task11/feb11.html" },  
+    { "id": 12, "title": "Task 12: Class Work", "description": "__________", "path": "task12/feb13.html" },
+    { "id": 13, "title": "Task 13: Class Work - Objects", "description": "____", "path": "task13/feb18.html" },
+    { "id": 14, "title": "Task 14: Class Work - Objects 2", "description": "________", "path": "task14/feb20.html" },
+    { "id": 15, "title": "Task 14b: Class Work - Functions ", "description": "_______", "path": "task14b/feb25.html" },
+    { "id": 16, "title": "Task 15: Class Work - Class & Bootstrap", "description": "__________", "path": "task15/mar11task.html" },
+    { "id": 17, "title": "Task 15b: Age Calculator", "description": "__________", "path": "task15b/mar11.html" },
+    { "id": 18, "title": "Task 16: Class Work - JSON ", "description": "_____", "path": "task16/mar13.html" }
+]
